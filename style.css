@@ -1,0 +1,221 @@
+/* Import Google Font for Manga/Comic Headers */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    /* This dotted background gives a subtle comic/screentone effect */
+    background-image: radial-gradient(#aaa 1px, transparent 1px);
+    background-size: 15px 15px;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The Core "Manga Panel" Style */
+.panel {
+    background-color: #fff;
+    border: 3px solid #000;
+    padding: 20px;
+    margin-bottom: 25px;
+    /* This is the key "comic panel" shadow effect */
+    box-shadow: 8px 8px 0 #000;
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* === Header Panel (index.html) === */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+/* Login/Register Dashboard (Req #6) */
+.login-dashboard {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* === Main Content Layout (index.html) === */
+.main-content {
+    display: flex;
+    gap: 25px;
+}
+
+/* Left side of homepage (Req #2) */
+.intro-panel {
+    flex: 3; /* Takes more space */
+}
+
+.intro-panel img {
+    max-width: 500px;  /* Set a max width (you can adjust 500px) */
+    width: 100%;       /* Keeps it responsive so it shrinks on small screens */
+    height: auto;      /* Maintains its shape */
+    display: block;    /* Allows you to use margin: auto */
+    margin: 0 auto 20px auto; /* Centers the image */
+    border: 3px solid #000;
+}
+
+/* Right side of homepage (Req #3, #5) */
+.services-panel {
+    flex: 1; /* Takes less space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Bar (Req #5) */
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Service Links (Req #3, #4) */
+.service-links {
+    list-style: none;
+    width: 100%;
+}
+
+.service-links li a {
+    display: block;
+    padding: 15px;
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.service-links li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* === Form Styling (registration.html) === */
+.form-panel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Using divs for layout as requested (Req #4) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Style for text, password, email, number, file inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+/* Radio & Checkbox Groups (Req #7f, 7i) */
+.radio-group, .checkbox-group {
+    padding: 10px;
+    border: 2px dashed #aaa;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: 400;
+    display: inline;
+    margin-left: 5px;
+}
+
+.radio-group input, .checkbox-group input {
+    margin-right: 5px;
+}
+
+/* Buttons (Req #7l) */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Universal Button & Input Style */
+button,
+input[type="submit"],
+input[type="reset"],
+.btn {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.1s ease-in;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+    /* On hover, "push" the button in */
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.btn:active {
+    transform: translate(2px, 2px);
+}
+
+/* Style the "Register" link to look like a button */
+.btn-register {
+    text-decoration: none;
+}
