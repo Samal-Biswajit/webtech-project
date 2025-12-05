@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Repository - EduConnect Hub</title>
+    <title>e-Repository - AcademiPanel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-            <a href="index.html" style="text-decoration: none;">
-                <h1 style="margin: 0; color: #ffffff;">EduConnect Hub</h1>
-            </a>
-            <a href="index.html" style="color: #fff; font-size: 18px;">Back to Home</a>
-        </div>
-    </header>
-
+    
     <div class="container">
-        <div style="background: #fff; padding: 2rem; margin-top: 2rem; border-radius: 8px;">
-            <h2>e-Repository</h2>
-            <p>Welcome to the e-Repository. This service allows you to upload, share, and access academic resources such as lecture notes, research papers, and project files.</p>
-            <p>A searchable database of all resources will be implemented on this page.</p>
+        <div class="navbar">
+            <a href="index.html">AcademiPanel</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 EduConnect Hub. All rights reserved.</p>
+    <div class="container">
+        
+        <div class="panel" style="text-align: center;">
+            <h1>e-Repository</h1>
+            <div style="max-width: 600px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="search" placeholder="Search resources..." style="margin-bottom: 0;">
+                <button class="btn">Search</button>
+            </div>
         </div>
-    </footer>
-    <script src="script.js"></script> </body>
+
+        <div class="panel">
+            <h2>Course Materials</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Data Structures Notes</h3>
+                    <p>Comprehensive study materials for Data Structures course.</p>
+                    <button class="btn">Download</button>
+                </div>
+                <div class="card">
+                    <h3>Algorithm Design PPTs</h3>
+                    <p>Lecture presentations on Algorithm Design patterns.</p>
+                    <button class="btn">Download</button>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px; max-width: 50%; margin-left: auto; margin-right: auto;">
+                <h3>Database Management PDF</h3>
+                <p>Complete guide to Database Management Systems.</p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Previous Question Papers</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>2024 Final Exam</h3>
+                    <p>Previous year's final examination paper with solutions.</p>
+                    <button class="btn">Download</button>
+                </div>
+                <div class="card">
+                    <h3>2023 Mid Semester</h3>
+                    <p>Mid semester examination paper from 2023.</p>
+                    <button class="btn">Download</button>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px; max-width: 50%; margin-left: auto; margin-right: auto;">
+                <h3>Sample Papers</h3>
+                <p>Collection of practice papers and mock tests.</p>
+                <button class="btn">Download</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="panel footer-panel">
+            <p>&copy; 2025 AcademiPanel. Built for Students.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

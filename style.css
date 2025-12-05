@@ -13,37 +13,89 @@ body {
     background-color: #fff;
     color: #000;
     padding: 20px;
-    /* This dotted background gives a subtle comic/screentone effect */
     background-image: radial-gradient(#aaa 1px, transparent 1px);
     background-size: 15px 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
-/* The Core "Manga Panel" Style */
+/* === The Core "Manga Panel" Style === */
 .panel {
     background-color: #fff;
     border: 3px solid #000;
     padding: 20px;
     margin-bottom: 25px;
-    /* This is the key "comic panel" shadow effect */
     box-shadow: 8px 8px 0 #000;
 }
 
-h1, h2, h3 {
+.card {
+    border: 2px solid #000;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.1s;
+    margin-bottom: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
+    line-height: 1.2;
 }
 
-p {
+p, li {
     line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
     margin-bottom: 15px;
+}
+
+/* Universal Footer */
+.footer-panel {
+    text-align: center;
+    margin-top: auto; 
+    padding: 15px;
+}
+
+/* === Navbar === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #000;
+    padding: 15px;
+    border: 3px solid #000;
+    color: #fff;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
 }
 
 /* === Header Panel (index.html) === */
@@ -51,60 +103,53 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
-.header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-}
-
-/* Login/Register Dashboard (Req #6) */
 .login-dashboard {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-/* === Main Content Layout (index.html) === */
+/* === Layout Utilities === */
 .main-content {
     display: flex;
     gap: 25px;
 }
 
-/* Left side of homepage (Req #2) */
-.intro-panel {
-    flex: 3; /* Takes more space */
-}
-
-.intro-panel img {
-    max-width: 500px;  /* Set a max width (you can adjust 500px) */
-    width: 100%;       /* Keeps it responsive so it shrinks on small screens */
-    height: auto;      /* Maintains its shape */
-    display: block;    /* Allows you to use margin: auto */
-    margin: 0 auto 20px auto; /* Centers the image */
-    border: 3px solid #000;
-}
-
-/* Right side of homepage (Req #3, #5) */
-.services-panel {
-    flex: 1; /* Takes less space */
+/* === NEW: Intro Panel Layout Fix (Side-by-Side) === */
+.intro-content-wrapper {
     display: flex;
-    flex-direction: column;
+    align-items: center; /* Vertically center image and text */
+    gap: 30px;
 }
 
-/* Search Bar (Req #5) */
-.search-bar {
+.intro-text {
+    flex: 1; /* Takes up remaining space */
+}
+
+.intro-image {
+    flex: 0 0 40%; /* Image takes 40% width */
+    text-align: center;
+}
+
+.intro-image img {
     width: 100%;
-    margin-bottom: 20px;
+    height: auto;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000; /* Add shadow to image to make it pop */
+    transform: rotate(2deg); /* Slight tilt for comic feel */
 }
 
-/* Service Links (Req #3, #4) */
+/* Service Links */
 .service-links {
     list-style: none;
     width: 100%;
+    padding-left: 0;
 }
-
 .service-links li a {
     display: block;
     padding: 15px;
@@ -119,33 +164,28 @@ p {
     background-color: #fff;
     transition: all 0.2s ease;
 }
-
 .service-links li a:hover {
     background-color: #000;
     color: #fff;
 }
 
-/* === Form Styling (registration.html) === */
-.form-panel {
-    max-width: 800px;
-    margin: 0 auto;
+/* Grids */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-/* Using divs for layout as requested (Req #4) */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* Style for text, password, email, number, file inputs */
+/* === Input & Button Styling === */
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="search"],
 input[type="number"],
 input[type="file"],
 textarea,
@@ -154,68 +194,115 @@ select {
     padding: 10px;
     border: 2px solid #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    margin-bottom: 10px;
     background-color: #f9f9f9;
+    max-width: 100%; 
 }
 
-/* Radio & Checkbox Groups (Req #7f, 7i) */
-.radio-group, .checkbox-group {
-    padding: 10px;
-    border: 2px dashed #aaa;
-}
-
-.radio-group label, .checkbox-group label {
-    font-weight: 400;
-    display: inline;
-    margin-left: 5px;
-}
-
-.radio-group input, .checkbox-group input {
-    margin-right: 5px;
-}
-
-/* Buttons (Req #7l) */
-.form-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-/* Universal Button & Input Style */
-button,
-input[type="submit"],
-input[type="reset"],
-.btn {
+button, .btn, input[type="submit"], input[type="reset"] {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     padding: 10px 20px;
     border: 3px solid #000;
     background-color: #fff;
     color: #000;
-    font-size: 1rem;
     cursor: pointer;
     box-shadow: 4px 4px 0 #000;
+    text-decoration: none;
+    display: inline-block;
     transition: all 0.1s ease-in;
+    text-align: center;
 }
 
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-.btn:hover {
+button:hover, .btn:hover, input[type="submit"]:hover {
     background-color: #000;
     color: #fff;
-    /* On hover, "push" the button in */
     box-shadow: none;
     transform: translate(4px, 4px);
 }
 
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-.btn:active {
-    transform: translate(2px, 2px);
+.form-group { margin-bottom: 20px; }
+.radio-group, .checkbox-group {
+    padding: 10px;
+    border: 2px dashed #aaa;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
 }
 
-/* Style the "Register" link to look like a button */
-.btn-register {
-    text-decoration: none;
+/* Specific Page Styles (MyWall, Exam, etc.) */
+.profile-header { display: flex; gap: 20px; align-items: center; }
+.avatar-circle {
+    width: 100px; height: 100px; min-width: 100px;
+    border-radius: 50%; border: 3px solid #000;
+    background-color: #ddd; background-size: cover; background-position: center;
+}
+.stats-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-number { font-weight: 700; font-size: 1.2rem; display: block; }
+
+.exam-stats-row {
+    display: flex; justify-content: space-between; gap: 15px; margin-bottom: 20px;
+}
+.exam-stat-box {
+    flex: 1; background: #fff; border: 2px solid #000; padding: 15px;
+    text-align: center; box-shadow: 4px 4px 0 #000; min-width: 150px;
+}
+.exam-stat-number { font-size: 2rem; font-family: 'Anton', sans-serif; display: block; }
+
+.forum-layout { display: grid; grid-template-columns: 3fr 1fr; gap: 25px; }
+.tag-pill {
+    display: inline-block; border: 1px solid #000; padding: 2px 8px;
+    border-radius: 12px; font-size: 0.8rem; background: #eee; margin-right: 5px; margin-bottom: 5px;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+
+    .main-content, 
+    .forum-layout, 
+    .grid-2 {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    /* Fix Intro Panel on Mobile */
+    .intro-content-wrapper {
+        flex-direction: column-reverse; /* Put Image below text on mobile */
+        text-align: center;
+    }
+    .intro-image {
+        width: 100%;
+        max-width: 300px; /* Limit size on mobile */
+        margin: 0 auto;
+    }
+    .intro-image img {
+        transform: rotate(0deg); /* Remove tilt on mobile to save space */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .login-dashboard {
+        flex-direction: column;
+        width: 100%;
+    }
+    .login-dashboard button, 
+    .login-dashboard .btn-register { width: 100%; }
+
+    .profile-header { flex-direction: column; text-align: center; }
+    .stats-row { justify-content: center; width: 100%; }
+    .exam-stats-row { flex-direction: column; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .navbar { flex-direction: column; gap: 10px; text-align: center; }
 }

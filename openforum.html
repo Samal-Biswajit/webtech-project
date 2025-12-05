@@ -3,32 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Openforum - EduConnect Hub</title>
+    <title>OpenForum - AcademiPanel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-            <a href="index.html" style="text-decoration: none;">
-                <h1 style="margin: 0; color: #ffffff;">EduConnect Hub</h1>
-            </a>
-            <a href="index.html" style="color: #fff; font-size: 18px;">Back to Home</a>
-        </div>
-    </header>
-
+    
     <div class="container">
-        <div style="background: #fff; padding: 2rem; margin-top: 2rem; border-radius: 8px;">
-            <h2>Openforum</h2>
-            <p>Welcome to the Openforum. This is where students and faculty can create discussion threads, ask questions, and collaborate on topics.</p>
-            <p>Forum categories and discussion boards will be available here soon.</p>
+        <div class="navbar">
+            <a href="index.html">AcademiPanel</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 EduConnect Hub. All rights reserved.</p>
+    <div class="container">
+        
+        <div class="panel">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Open Forum</h1>
+                <button class="btn">Start New</button>
+            </div>
+            <p>Connect with classmates, ask questions, share resources.</p>
         </div>
-    </footer>
-    <script src="script.js"></script> </body>
+
+        <div class="forum-layout">
+            
+            <div>
+                <div class="panel">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="background: #000; color: #fff; padding: 5px; font-weight: bold;">JD</div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Assignment Deadline Extension</h3>
+                            <small>Posted by John Doe • 2 hours ago</small>
+                        </div>
+                    </div>
+                    <p>Can we get an extension for the upcoming assignment due to the platform outage last night?</p>
+                    <div style="margin-bottom: 10px;">
+                        <span class="tag-pill">announcements</span>
+                        <span class="tag-pill">assignments</span>
+                    </div>
+                    <button class="btn" style="font-size: 0.8rem; padding: 5px 10px;">View Replies (15)</button>
+                </div>
+
+                <div class="panel">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="background: #000; color: #fff; padding: 5px; font-weight: bold;">JS</div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">Study Group for Final Exams</h3>
+                            <small>Posted by Jane Smith • 1 day ago</small>
+                        </div>
+                    </div>
+                    <p>Looking for study partners for DBMS & OS finals. Prefer evenings.</p>
+                    <div style="margin-bottom: 10px;">
+                        <span class="tag-pill">study-group</span>
+                        <span class="tag-pill">exams</span>
+                    </div>
+                    <button class="btn" style="font-size: 0.8rem; padding: 5px 10px;">View Replies (8)</button>
+                </div>
+
+                <div class="panel">
+                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="background: #000; color: #fff; padding: 5px; font-weight: bold;">P</div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.2rem;">SMOTE vs Class Weights</h3>
+                            <small>Posted by Priya • 5 days ago</small>
+                        </div>
+                    </div>
+                    <p>Which approach worked better for fraud detection? Sharing experiments.</p>
+                    <div style="margin-bottom: 10px;">
+                        <span class="tag-pill">ml</span>
+                        <span class="tag-pill">smote</span>
+                    </div>
+                    <button class="btn" style="font-size: 0.8rem; padding: 5px 10px;">View Replies (6)</button>
+                </div>
+            </div>
+
+            <div>
+                <div class="panel">
+                    <h3>Start New Discussion</h3>
+                    <input type="text" placeholder="Title">
+                    <input type="text" placeholder="Tags (comma separated)">
+                    <textarea rows="4" placeholder="Write your question..."></textarea>
+                    <button class="btn" style="width: 100%;">Post Discussion</button>
+                </div>
+
+                <div class="panel">
+                    <h3>Trending Resources</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #000;">
+                            <strong>Concurrency Notes</strong><br><small>PDF - 36 pages</small>
+                        </li>
+                        <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #000;">
+                            <strong>Past Papers (2018-2024)</strong><br><small>Solved and annotated</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="panel footer-panel">
+            <p>&copy; 2025 AcademiPanel. Built for Students.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

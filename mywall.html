@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWall - EduConnect Hub</title>
+    <title>MyWall - AcademiPanel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-            <a href="index.html" style="text-decoration: none;">
-                <h1 style="margin: 0; color: #ffffff;">EduConnect Hub</h1>
-            </a>
-            <a href="index.html" style="color: #fff; font-size: 18px;">Back to Home</a>
-        </div>
-    </header>
-
+    
     <div class="container">
-        <div style="background: #fff; padding: 2rem; margin-top: 2rem; border-radius: 8px;">
-            <h2>MyWall</h2>
-            <p>Welcome to your personal "MyWall". This page will serve as your academic profile and dashboard.</p>
-            <p>You will be able to track your course progress, showcase your projects, and manage your e-Repository uploads from here.</p>
+        <div class="navbar">
+            <a href="index.html">AcademiPanel</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 EduConnect Hub. All rights reserved.</p>
+    <div class="container">
+        
+        <div class="panel">
+            <div class="profile-header">
+                <div class="avatar-circle" style="background-image: url('./images/profile.jpg');"></div>
+                <div class="profile-info">
+                    <h2>Biswajit Samal</h2>
+                    <p>Computer Science Student</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item"><span class="stat-number">15</span> Posts</div>
+                        <div class="stat-item"><span class="stat-number">24</span> Following</div>
+                        <div class="stat-item"><span class="stat-number">67k</span> Followers</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="script.js"></script> </body>
+
+        <div class="panel">
+            <h3>Create Post</h3>
+            <textarea rows="3" placeholder="What's on your mind?"></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Photo</button>
+                    <button class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Attachment</button>
+                </div>
+                <button class="btn">Post</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div style="display: flex; justify-content: space-between;">
+                <h3>Project Milestone Achieved!</h3>
+                <small>2 hours ago</small>
+            </div>
+            <p>Completed the first phase of my project. More to come!</p>
+            
+            <div style="width: 100%; background: #ddd; border: 2px solid #000; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
+                <img src="./images/project.jpg" alt="Project Image" style="max-width: 100%; max-height: 100%;">
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Like (15)</button>
+                <button class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Comment (5)</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div style="display: flex; justify-content: space-between;">
+                <h3>Study Group Session</h3>
+                <small>1 day ago</small>
+            </div>
+            <p>Great study session today! Preparing for exams.</p>
+            <button class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Like</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="panel footer-panel">
+            <p>&copy; 2025 AcademiPanel. Built for Students.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

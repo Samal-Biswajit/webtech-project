@@ -7,16 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
     <div class="container">
-        <div class="panel">
-            <h1>e-Exam Service</h1>
-            <p>This page will describe the e-Exam service. Content to be added soon!</p>
-            <br>
-            <a href="index.html" class="btn">Back to Home</a>
+        <div class="navbar">
+            <a href="index.html">AcademiPanel</a>
+            <a href="index.html">Back to Home</a>
         </div>
     </div>
-    <script src="script.js"></script> </body>
 
+    <div class="container">
+        
+        <div class="exam-stats-row">
+            <div class="exam-stat-box">
+                <span class="exam-stat-number" style="color: #000;">Mid Semester</span>
+                <small>Next Exam</small>
+            </div>
+            <div class="exam-stat-box">
+                <span class="exam-stat-number" style="color: #000;">2</span>
+                <small>Exams Completed</small>
+            </div>
+            <div class="exam-stat-box">
+                <span class="exam-stat-number" style="color: #000;">88%</span>
+                <small>Average Score</small>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Upcoming Exams</h2>
+                <button class="btn">View Details</button>
+            </div>
+            <p>Next: Mid Semester Exam</p>
+            
+            <div class="grid-2" style="grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
+                <div class="card"><strong>00</strong><br>Days</div>
+                <div class="card"><strong>00</strong><br>Hrs</div>
+                <div class="card"><strong>00</strong><br>Mins</div>
+                <div class="card"><strong>00</strong><br>Secs</div>
+            </div>
+
+            <div class="card" style="border-left: 10px solid #000;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <div>
+                        <h3>Mid Semester Exam</h3>
+                        <p>Database Management Systems<br>15/11/2025, 10:00:00 am</p>
+                    </div>
+                    <div>
+                        <span class="tag-pill" style="background: yellow;">Upcoming</span>
+                        <button class="btn" style="margin-left: 10px;">Practice</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border-left: 10px solid #aaa;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <div>
+                        <h3>Final Exam</h3>
+                        <p>Database Management Systems<br>20/12/2025, 9:00:00 am</p>
+                    </div>
+                    <div>
+                        <span class="tag-pill" style="background: #aaa; color: #fff;">Not Started</span>
+                        <button class="btn" style="margin-left: 10px;">Practice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Past Exams & Results</h2>
+            
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3>Quiz 1</h3>
+                        <p>Date: 2025-10-10 | Score: 85/100</p>
+                        <small>Feedback: Good understanding of basics</small>
+                    </div>
+                    <button class="btn">View</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3>Assignment 2</h3>
+                        <p>Date: 2025-10-05 | Score: 92/100</p>
+                        <small>Feedback: Excellent implementation</small>
+                    </div>
+                    <button class="btn">View</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="panel footer-panel">
+            <p>&copy; 2025 AcademiPanel. Built for Students.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
